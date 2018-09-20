@@ -1,6 +1,7 @@
 cmake-build-debug
 cmake-build-release
 bin
+model
 src
 doc
 docker_engine*.yaml

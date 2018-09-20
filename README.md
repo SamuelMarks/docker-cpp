@@ -20,7 +20,9 @@ swagger-codegen generate -i docker_engine."$ver".yaml -l tizen -o .
 Next:
 ```sh
 mkdir -p cmake-build-debug && cd $_
-conan install ..
+conan remote add bintray 'https://api.bintray.com/conan/bincrafters/public-conan'
+conan remote add DEGoodmanWilson 'https://api.bintray.com/conan/degoodmanwilson/opensource'
+conan install .. --build cpr
 cmake -DCMAKE_BUILD_TYPE=Debug .. && make
 ```
 
